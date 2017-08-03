@@ -1,0 +1,35 @@
+﻿
+
+@model MyStore.BL.ViewModels.ProductListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h2>Products</h2>
+
+        <table border="5">
+            <tr>
+                <th>Id</th>
+                <th>Model</th>
+                <th>Price</th>
+                <th>Premium</th>
+            </tr>
+            @foreach (var i in Model.Products)
+            {
+                <tr>
+                    <td>@i.Product.ProductId</td>
+                    <td>@i.Product.Name</td>
+                    <td>@i.Product.Price</td>
+                    <td>@i.AccountTypeLabel</td>
+                </tr>
+            }
+        </table>
+</div>
+</body>
+</html>
